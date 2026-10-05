@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KrishiBondhu – কৃষিবন্ধু</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#fff;--bg2:#f1f8f2;--tx:#14301d;--mu:#5b7264;--g:#1f8a43;--g2:#0f6a31;--bd:#d9eadd;--card:#fff}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e1a12;--bg2:#14261a;--tx:#e6f3ea;--mu:#9bb5a4;--g:#43b86a;--g2:#2e9552;--bd:#25402e;--card:#162a1d}}
+:root[data-theme=dark]{--bg:#0e1a12;--bg2:#14261a;--tx:#e6f3ea;--mu:#9bb5a4;--g:#43b86a;--g2:#2e9552;--bd:#25402e;--card:#162a1d}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif;line-height:1.6}
+html[lang=bn] .en,html[lang=en] .bn{display:none}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--bd)}
+.bar{max-width:1100px;margin:auto;display:flex;align-items:center;gap:10px;padding:10px 14px}
+.logo{font-weight:700;font-size:1.2rem;color:var(--g);white-space:nowrap}
+nav{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}
+nav button{border:0;background:none;color:var(--tx);padding:7px 11px;border-radius:99px;cursor:pointer;font:inherit;white-space:nowrap;transition:.2s}
+nav button:hover,nav button.on{background:var(--g);color:#fff}
+.lang{border:1px solid var(--g);background:none;color:var(--g);border-radius:99px;padding:5px 12px;cursor:pointer;font:inherit}
+main{max-width:1100px;margin:auto;padding:16px 14px 40px}
+.page{display:none}.page.on{display:block}
+.hero{background:linear-gradient(135deg,#dff3e4,#f4fbf5 60%,#fff);border-radius:24px;padding:32px 20px;text-align:center;color:#14301d}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .hero{background:linear-gradient(135deg,#1b3a26,#14261a)}}
+.hero h1{font-size:clamp(1.5rem,5vw,2.5rem);margin:0 0 8px;line-height:1.3}
+:root[data-theme=dark] .hero{background:linear-gradient(135deg,#1b3a26,#14261a)}
+@media(prefers-color-scheme:dark){.hero{color:#e6f3ea}}
+.hero p{color:var(--mu);margin:0 0 18px}
+.search{display:flex;max-width:560px;margin:0 auto 16px;background:var(--card);border:1px solid var(--bd);border-radius:99px;padding:4px;box-shadow:0 4px 14px #0001}
+.search input{flex:1;border:0;background:none;padding:10px 16px;font:inherit;color:var(--tx);min-width:0;outline:0}
+.btn{background:var(--g);color:#fff;border:0;border-radius:99px;padding:10px 20px;font:inherit;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--g2);transform:translateY(-1px)}
+.btn.o{background:none;color:var(--g);border:1px solid var(--g)}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:16px;transition:.2s}
+.cat{text-align:center;cursor:pointer;font-weight:600}.cat:hover{transform:translateY(-4px);box-shadow:0 8px 20px #1f8a4326}
+.cat i{display:block;font-style:normal;font-size:2.2rem}
+h2{margin:28px 0 12px;font-size:1.3rem}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tabs button{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:99px;padding:6px 14px;cursor:pointer;font:inherit}
+.tabs button.on{background:var(--g);color:#fff;border-color:var(--g)}
+.warn{background:#fff6dd;color:#5c4400;border-radius:12px;padding:10px 14px;font-size:.9rem;margin:12px 0}
+label{display:block;font-size:.9rem;color:var(--mu);margin:8px 0 3px}
+input,select,textarea{width:100%;padding:9px 12px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit}
+.res{background:var(--bg2);border-radius:12px;padding:10px 14px;margin-top:10px;font-weight:600}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--bd)}
+.scroll{overflow-x:auto}
+.chat{height:380px;overflow-y:auto;background:var(--bg2);border-radius:18px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:85%;padding:9px 13px;border-radius:16px;white-space:pre-wrap}
+.msg.u{align-self:flex-end;background:var(--g);color:#fff;border-bottom-right-radius:4px}
+.msg.a{align-self:flex-start;background:var(--card);border:1px solid var(--bd);border-bottom-left-radius:4px}
+.dots span{display:inline-block;width:7px;height:7px;margin:0 2px;border-radius:50%;background:var(--mu);animation:b 1s infinite}
+.dots span:nth-child(2){animation-delay:.15s}.dots span:nth-child(3){animation-delay:.3s}
+@keyframes b{50%{transform:translateY(-5px)}}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.chips button{border:1px solid var(--g);color:var(--g);background:none;border-radius:99px;padding:5px 12px;cursor:pointer;font:inherit}
+.row{display:flex;gap:8px;margin-top:8px}
+.fc{text-align:center}.fc b{display:block;font-size:1.2rem}
+footer{text-align:center;color:var(--mu);font-size:.85rem;padding:20px}
+.two{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<div class="logo">🌾 KrishiBondhu</div>
+<nav id="nav"></nav>
+<button class="lang" onclick="toggleLang()">বাংলা / EN</button>
+</div></header>
+<main>
+
+<section class="page on" id="home">
+<div class="hero">
+<h1><span class="bn">কৃষি, প্রাণিসম্পদ ও মৎস্যের সকল সমাধান এক প্ল্যাটফর্মে</span><span class="en">All Agriculture, Livestock & Fisheries Solutions in One Platform</span></h1>
+<p><span class="bn">কৃষক ও খামারিদের জন্য সহজ, নির্ভরযোগ্য ও প্রযুক্তিনির্ভর তথ্যসেবা</span><span class="en">Simple, reliable, technology-driven information for farmers</span></p>
+<div class="search"><input id="hs" placeholder="আপনার সমস্যা বা প্রশ্ন লিখুন..." onkeydown="if(event.key==='Enter')askFromHome()"><button class="btn" onclick="askFromHome()">🔍</button></div>
+<button class="btn" onclick="go('ai')">AI Assistant ব্যবহার করুন</button>
+<button class="btn o" onclick="go('guides')">কৃষি তথ্য দেখুন</button>
+</div>
+<div class="warn">📞 <b>জরুরি সহায়তা:</b> কৃষি কল সেন্টার <b>১৬১২৩</b> · প্রাণিসম্পদ হটলাইন <b>১৬৩৫৮</b> (নম্বর পরিবর্তন হতে পারে, যাচাই করে নিন)</div><h2><span class="bn">বিভাগসমূহ</span><span class="en">Categories</span></h2>
+<div class="grid">
+<div class="card cat" onclick="go('guides','agri')"><i>🌱</i>কৃষি</div>
+<div class="card cat" onclick="go('guides','live')"><i>🐄</i>গবাদিপ্রাণী</div>
+<div class="card cat" onclick="go('guides','poul')"><i>🐔</i>হাঁস-মুরগি</div>
+<div class="card cat" onclick="go('guides','fish')"><i>🐟</i>মৎস্য</div>
+<div class="card cat" onclick="go('aid')"><i>🩺</i>প্রাথমিক চিকিৎসা</div>
+</div>
+<h2><span class="bn">আজকের বাজারদর</span><span class="en">Latest Market Prices</span></h2>
+<div class="card scroll"><table id="mp-home"></table></div>
+<h2><span class="bn">আবহাওয়া</span><span class="en">Weather</span></h2>
+<div class="card" id="w-home"></div>
+<h2><span class="bn">স্মার্ট ক্যালকুলেটর ও সম্প্রদায়</span><span class="en">Calculators & Community</span></h2>
+<div class="grid">
+<div class="card cat" onclick="go('calc')"><i>🧮</i><span class="bn">ক্যালকুলেটর</span><span class="en">Calculators</span></div>
+<div class="card cat" onclick="go('ai')"><i>🤖</i>KrishiBondhu AI</div>
+<div class="card cat" onclick="go('comm')"><i>👥</i><span class="bn">কৃষক কমিউনিটি</span><span class="en">Community</span></div>
+</div>
+</section>
+
+<section class="page" id="guides">
+<h2><span class="bn">কৃষি ও খামার তথ্য</span><span class="en">Farming Guides</span></h2>
+<div class="tabs" id="gtabs"></div>
+<div class="two" id="glist"></div>
+</section>
+
+<section class="page" id="aid">
+<h2>🩺 <span class="bn">প্রাথমিক চিকিৎসা ও স্বাস্থ্য নির্দেশিকা</span><span class="en">First Aid & Health Guidance</span></h2>
+<div class="warn"><span class="bn">⚠️ এই ওয়েবসাইট পশুচিকিৎসক বা বিশেষজ্ঞের পরামর্শের বিকল্প নয়। গুরুতর হলে দ্রুত বিশেষজ্ঞের সাথে যোগাযোগ করুন।</span><span class="en">⚠️ This site does not replace professional veterinary or medical advice. Contact an expert quickly if serious.</span></div>
+<div class="card">
+<label>প্রাণী / Animal</label><select id="an" onchange="fillSym()"></select>
+<label>লক্ষণ / Symptom</label><select id="sy"></select>
+<div class="row"><button class="btn" onclick="showAid()">দেখুন / Show</button></div>
+</div>
+<div id="aidout"></div>
+</section>
+
+<section class="page" id="ai">
+<h2>🤖 KrishiBondhu AI</h2>
+<div class="chat" id="chat"></div>
+<div class="chips" id="chips"></div>
+<div class="row"><input id="q" placeholder="যেমন: আমার মুরগি খাচ্ছে না এবং পাতলা পায়খানা করছে" onkeydown="if(event.key==='Enter')send()"><button class="btn" onclick="send()">➤</button></div>
+<div class="warn">এটি সাধারণ তথ্য-সহায়ক (ডেমো)। চিকিৎসার জন্য বিশেষজ্ঞের পরামর্শ নিন।<br><span class="en">General guidance (demo). Consult a professional for treatment.</span></div>
+</section>
+
+<section class="page" id="calc">
+<h2>🧮 <span class="bn">স্মার্ট ক্যালকুলেটর</span><span class="en">Smart Calculators</span></h2>
+<div class="two" id="calcs"></div>
+</section>
+
+<section class="page" id="weather">
+<h2>⛅ <span class="bn">আবহাওয়া</span><span class="en">Weather</span></h2>
+<div class="card" id="w-main"></div>
+</section>
+
+<section class="page" id="market">
+<h2>🏷️ <span class="bn">আজকের বাজারদর</span><span class="en">Today's Market Price</span></h2>
+<div class="card scroll"><table id="mp"></table></div>
+<p class="warn">নমুনা তথ্য (ডেমো) — বাস্তব ডেটা API যুক্ত করতে হবে। / Sample data (demo).</p>
+</section>
+
+<section class="page" id="comm">
+<h2>👥 <span class="bn">কৃষক কমিউনিটি</span><span class="en">Farmer Community</span></h2>
+<div class="card"><textarea id="pt" rows="3" placeholder="আপনার প্রশ্ন বা অভিজ্ঞতা লিখুন..."></textarea>
+<div class="row"><input type="file" accept="image/*"><button class="btn" onclick="post()">পোস্ট</button></div></div>
+<div class="row"><input id="ps" placeholder="🔍 প্রশ্ন খুঁজুন / Search" oninput="renderPosts()"></div>
+<div id="posts"></div>
+</section>
+<section class="page" id="cal"><h2>📅 মৌসুমি ফসল ক্যালেন্ডার</h2><div class="card scroll"><table id="ct"></table></div>
+<h2>💉 হাঁস-মুরগির টিকা সূচি (সাধারণ)</h2><div class="card scroll"><table id="vp"></table></div>
+<h2>💉 গবাদিপ্রাণীর টিকা সূচি (সাধারণ)</h2><div class="card scroll"><table id="vl"></table></div>
+<p class="warn">⚠️ এগুলো সাধারণ নির্দেশিকা। এলাকা, জাত ও রোগের ঝুঁকি অনুযায়ী স্থানীয় প্রাণিসম্পদ/কৃষি কর্মকর্তার পরামর্শ নিন।</p></section>
+<section class="page" id="blog"><h2>📰 কৃষি আর্টিকেল</h2><div id="bl"></div></section>
+<section class="page" id="about"><h2>ℹ️ আমাদের সম্পর্কে ও যোগাযোগ</h2><div class="two"><div class="card"><b>কৃষিবন্ধু</b><p>কৃষক, খামারি ও মৎস্যচাষিদের জন্য সহজ বাংলায় তথ্য, ক্যালকুলেটর ও সহায়তা এক জায়গায়।</p><p>📞 কৃষি কল সেন্টার: ১৬১২৩<br>📞 প্রাণিসম্পদ হটলাইন: ১৬৩৫৮<br>🏛️ নিকটস্থ উপজেলা কৃষি, প্রাণিসম্পদ ও মৎস্য অফিস</p></div>
+<div class="card"><b>বার্তা পাঠান</b><label>নাম</label><input id="cn"><label>বার্তা</label><textarea id="cm" rows="3"></textarea><div class="row"><button class="btn" onclick="sendC()">পাঠান</button></div></div></div></section>
+<section class="page" id="acct"><div id="ac"></div></section>
+<section class="page" id="admin"><h2>🛠️ অ্যাডমিন ড্যাশবোর্ড (ডেমো)</h2><div id="ad"></div></section>
+</main>
+<footer>© KrishiBondhu — <span class="bn">লগইন, ড্যাশবোর্ড ও অ্যাডমিন প্যানেলের জন্য ব্যাকএন্ড প্রয়োজন।</span><span class="en">Login, dashboards & admin need a backend.</span></footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const L=()=>document.documentElement.lang;
+const tr=(b,e)=>L()==='bn'?b:e;
+const pages=[['home','হোম','Home'],['guides','তথ্য','Guides'],['aid','চিকিৎসা','First Aid'],['ai','AI','AI'],['calc','ক্যালকুলেটর','Calculators'],['weather','আবহাওয়া','Weather'],['market','বাজারদর','Prices'],['comm','কমিউনিটি','Community'],['cal','ক্যালেন্ডার/টিকা','Calendar & Vaccines'],['blog','আর্টিকেল','Articles'],['about','যোগাযোগ','Contact'],['acct','লগইন','Account'],['admin','অ্যাডমিন','Admin']];
+function buildNav(){$('nav').innerHTML=pages.map(p=>`<button data-p="${p[0]}" onclick="go('${p[0]}')">${tr(p[1],p[2])}</button>`).join('');}
+function go(p,tab){document.querySelectorAll('.page').forEach(e=>e.classList.toggle('on',e.id===p));
+ document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.p===p));
+ if(tab)showGuides(tab);window.scrollTo(0,0);}
+function toggleLang(){document.documentElement.lang=L()==='bn'?'en':'bn';buildNav();renderAll();}
+
+const G={agri:{n:['🌱 কৃষি','🌱 Agriculture'],i:[['ধান চাষ গাইড','Rice cultivation'],['গম ও ভুট্টা','Wheat & maize'],['সবজি ও ফল','Vegetables & fruit'],['মৌসুমি ফসল ক্যালেন্ডার','Seasonal crop calendar'],['সার ও সেচ নির্দেশনা','Fertilizer & irrigation'],['রোগ ও পোকামাকড়','Crop disease & pests']]},
+live:{n:['🐄 গবাদিপ্রাণী','🐄 Livestock'],i:[['গরু পালন','Cow farming'],['ছাগল ও ভেড়া পালন','Goat & sheep farming'],['খাদ্য ব্যবস্থাপনা','Feeding guide'],['টিকা সূচি (এফএমডি, তড়কা, বিকিউ)','Vaccination (FMD, Anthrax, BQ)'],['সাধারণ রোগ ও প্রতিরোধ','Common diseases']]},
+poul:{n:['🐔 হাঁস-মুরগি','🐔 Poultry'],i:[['ব্রয়লার ব্যবস্থাপনা','Broiler management'],['লেয়ার ব্যবস্থাপনা','Layer management'],['হাঁস পালন','Duck farming'],['টিকা সূচি (রানীক্ষেত, গামবোরো)','Vaccines (Ranikhet, Gumboro)'],['রোগের লক্ষণ ও প্রতিরোধ','Disease signs & prevention']]},
+fish:{n:['🐟 মৎস্য','🐟 Fisheries'],i:[['পুকুর প্রস্তুতি','Pond preparation'],['তেলাপিয়া চাষ','Tilapia'],['রুই-কাতলা চাষ','Rui & Catla'],['পাঙ্গাস চাষ','Pangas'],['পানির গুণাগুণ','Water quality'],['মাছের রোগ','Fish diseases']]}};
+let gt='agri';
+function showGuides(t){gt=t||gt;$('gtabs').innerHTML=Object.keys(G).map(k=>`<button class="${k===gt?'on':''}" onclick="showGuides('${k}')">${tr(...G[k].n)}</button>`).join('');
+ $('glist').innerHTML=G[gt].i.map(x=>`<div class="card"><b>📖 ${tr(x[0],x[1])}</b><p style="color:var(--mu);margin:4px 0 0">${(TIPS[gt]||[])[G[gt].i.indexOf(x)]||''}</p></div>`).join('');}
+
+const A={'গরু/ছাগল|Cattle/Goat':{'পেট ফাঁপা|Bloat':['অতিরিক্ত সবুজ ঘাস/দানাদার খাবার','দাঁড় করিয়ে হাঁটান, খাবার বন্ধ রাখুন','হঠাৎ খাদ্য পরিবর্তন করবেন না','শ্বাসকষ্ট বা পেট খুব শক্ত'],'জ্বর ও খাওয়া কমে যাওয়া|Fever, off feed':['সংক্রমণ, এফএমডি, পরজীবী','ছায়ায় রাখুন, পরিষ্কার পানি দিন','নিয়মিত টিকা ও কৃমিনাশক','৩ দিনের বেশি জ্বর বা মুখে ঘা']},
+'মুরগি|Chicken':{'খাচ্ছে না, পাতলা পায়খানা|Not eating, diarrhea':['কক্সিডিওসিস, ইকোলাই, দূষিত পানি/খাবার','অসুস্থ মুরগি আলাদা করুন, পরিষ্কার পানি ও ইলেক্ট্রোলাইট দিন','জীবনিরাপত্তা, টিকা, শুকনো লিটার','রক্ত মেশানো পায়খানা বা একসাথে অনেকের মৃত্যু'],'হাঁচি-কাশি|Sneezing, coughing':['রানীক্ষেত, সর্দি-কাশি, অ্যামোনিয়া','ঘরে বাতাস চলাচল বাড়ান','টিকা সূচি মানুন','শ্বাসকষ্ট বা মাথা বাঁকা']},
+'মাছ|Fish':{'পানির উপরে ভেসে ওঠা|Gasping at surface':['অক্সিজেন কম, অ্যামোনিয়া, ভোরের গরম','এরেটর/পানি পাম্প চালান, খাবার বন্ধ রাখুন','অতিরিক্ত মজুত ও খাবার এড়ান','মাছ মরতে শুরু করলে'],'গায়ে লাল দাগ/ঘা|Red spots/ulcers':['ব্যাকটেরিয়া, ক্ষত, খারাপ পানি','পানির মান পরীক্ষা করুন, চুন প্রয়োগ','পুকুর প্রস্তুতি ও পানি পরিবর্তন','দাগ ছড়িয়ে পড়লে']}};
+function fillSym(){const a=Object.keys(A)[$('an').value];$('sy').innerHTML=Object.keys(A[a]).map((s,i)=>`<option value="${i}">${tr(...s.split('|'))}</option>`).join('');}
+function showAid(){const a=Object.keys(A)[$('an').value],s=Object.keys(A[a])[$('sy').value],d=A[a][s],h=[['কারণ','Possible causes'],['এখনই করণীয়','Immediate safe steps'],['প্রতিরোধ','Prevention'],['সতর্ক সংকেত','Warning signs']];
+ $('aidout').innerHTML=`<div class="card" style="margin-top:12px">${d.map((x,i)=>`<p><b>${i==3?'🚨':'✅'} ${tr(...h[i])}:</b> ${x}</p>`).join('')}<p><b>👨‍⚕️</b> ${tr('সন্দেহ হলে স্থানীয় উপজেলা প্রাণিসম্পদ/মৎস্য/কৃষি কর্মকর্তার সাথে যোগাযোগ করুন।','If in doubt, contact your local Upazila livestock/fisheries/agriculture officer.')}</p></div>`;}
+function initAid(){$('an').innerHTML=Object.keys(A).map((k,i)=>`<option value="${i}">${tr(...k.split('|'))}</option>`).join('');fillSym();}
+
+const sug=['আমার মুরগি খাচ্ছে না এবং পাতলা পায়খানা করছে','পুকুরে মাছ ভেসে উঠছে, কী করব?','গরুর পেট ফুলে গেছে','ধান গাছে পোকা'];
+const KB=[[/মুরগি|chicken|hen|poultry/i,'🐔 সম্ভাব্য কারণ: কক্সিডিওসিস, ইকোলাই বা দূষিত পানি।\n✅ এখনই: অসুস্থ মুরগি আলাদা করুন, পরিষ্কার পানি ও ইলেক্ট্রোলাইট দিন, ঘর শুকনো রাখুন।\n🛡️ প্রতিরোধ: নিয়মিত টিকা ও জীবনিরাপত্তা।\n🚨 রক্ত মেশানো পায়খানা বা অনেক মুরগি মরলে দ্রুত বিশেষজ্ঞ ডাকুন।\n📖 গাইড: হাঁস-মুরগি → রোগের লক্ষণ ও প্রতিরোধ'],
+[/মাছ|পুকুর|fish|pond/i,'🐟 সম্ভাব্য কারণ: পানিতে অক্সিজেন কম, অ্যামোনিয়া বেশি।\n✅ এখনই: এরেটর/পাম্প চালান, খাবার বন্ধ, প্রয়োজনে আংশিক পানি বদল।\n🛡️ প্রতিরোধ: অতিরিক্ত মজুত এড়ান, নিয়মিত চুন।\n🚨 মাছ মরতে শুরু করলে মৎস্য কর্মকর্তাকে জানান।\n📖 গাইড: মৎস্য → পানির গুণাগুণ'],
+[/গরু|ছাগল|cow|goat|cattle|পেট/i,'🐄 সম্ভাব্য কারণ: পেট ফাঁপা, সংক্রমণ বা খাদ্য পরিবর্তন।\n✅ এখনই: প্রাণীকে হাঁটান, দানাদার খাবার বন্ধ রাখুন, ছায়ায় ও পানি দিন।\n🛡️ প্রতিরোধ: টিকা ও কৃমিনাশক সূচি।\n🚨 শ্বাসকষ্ট বা ২৪ ঘণ্টার বেশি না খেলে ডাক্তার ডাকুন।\n📖 গাইড: গবাদিপ্রাণী'],
+[/ধান|ফসল|পোকা|rice|crop|pest/i,'🌱 সম্ভাব্য কারণ: মাজরা বা পাতা মোড়ানো পোকা, পুষ্টির ঘাটতি।\n✅ এখনই: ক্ষেত পরিদর্শন করুন, আক্রান্ত অংশ সরান, পার্চিং (ডাল পুঁতে পাখি বসার ব্যবস্থা) করুন।\n🛡️ প্রতিরোধ: সুষম সার ও পোকা-সহনশীল জাত।\n🚨 ব্যাপক আক্রমণে উপজেলা কৃষি অফিসে যোগাযোগ করুন।\n📖 গাইড: কৃষি → রোগ ও পোকামাকড়']];
+function msg(t,c){const d=document.createElement('div');d.className='msg '+c;d.textContent=t;$('chat').appendChild(d);$('chat').scrollTop=1e9;return d;}
+function send(t){t=t||$('q').value.trim();if(!t)return;$('q').value='';msg(t,'u');const d=document.createElement('div');d.className='msg a dots';d.innerHTML='<span></span><span></span><span></span>';$('chat').appendChild(d);$('chat').scrollTop=1e9;
+ setTimeout(()=>{d.remove();hist('chat',t);const k=KB.find(x=>x[0].test(t));msg(k?k[1]:'দুঃখিত, বিষয়টি বুঝতে পারিনি। প্রাণীর ধরন ও লক্ষণ লিখুন।','a');},900);}
+function initChat(){$('chat').innerHTML='';msg('আসসালামু আলাইকুম! আমি কৃষিবন্ধু AI। আপনার কৃষি, প্রাণী বা মাছের সমস্যা লিখুন।','a');$('chips').innerHTML=sug.map(s=>`<button onclick="send('${s}')">${s}</button>`).join('');}
+function askFromHome(){go('ai');const v=$('hs').value.trim();if(v)send(v);}
+
+const N=id=>+$(id).value||0,R=(id,t)=>$(id).innerHTML=t;
+const C=[
+['🐄 গবাদিপ্রাণী খাদ্য','Livestock feed',[['w','ওজন (কেজি)',350],['n','সংখ্যা',2]],()=>{const x=N('w')*0.03*N('n');return `${x.toFixed(1)} কেজি শুকনো খাদ্য/দিন (≈৩% ওজন)`}],
+['🐔 মুরগির খাদ্য','Poultry feed',[['n','মুরগির সংখ্যা',100],['g','গ্রাম/মুরগি/দিন (লেয়ার ~১১০)',110]],()=>`${(N('n')*N('g')/1000).toFixed(1)} কেজি/দিন`],
+['🐟 মাছ মজুত','Fish stocking',[['a','পুকুর (শতাংশ)',20],['d','পোনা/শতাংশ',100]],()=>`${Math.round(N('a')*N('d'))} টি পোনা`],
+['🐟 মাছের খাদ্য','Fish feed',[['b','মোট মাছের ওজন (কেজি)',200],['p','খাদ্য হার %',3]],()=>`${(N('b')*N('p')/100).toFixed(2)} কেজি/দিন`],
+['💧 পুকুর আয়তন','Pond volume',[['l','দৈর্ঘ্য (মি)',40],['wd','প্রস্থ (মি)',20],['dp','গভীরতা (মি)',1.5]],()=>{const ar=N('l')*N('wd');return `ক্ষেত্রফল ${ar} বর্গমি (${(ar/40.47).toFixed(1)} শতাংশ), আয়তন ${(ar*N('dp')).toFixed(0)} ঘনমি`}],
+['🌾 সার (ধান, মোটামুটি)','Fertilizer (rice, approx.)',[['s','জমি (শতাংশ)',33]],()=>{const s=N('s');return `ইউরিয়া ${(s*0.37).toFixed(1)}, টিএসপি ${(s*0.15).toFixed(1)}, এমওপি ${(s*0.17).toFixed(1)} কেজি (আনুমানিক; স্থানীয় সুপারিশ দেখুন)`}],
+['💰 খরচ ও লাভ','Cost & profit',[['i','আয় (টাকা)',100000],['c','মোট খরচ (টাকা)',70000]],()=>{const p=N('i')-N('c');return `${p>=0?'লাভ':'ক্ষতি'}: ৳${Math.abs(p).toLocaleString()} (${N('c')?(p/N('c')*100).toFixed(1):0}%)`}]];
+function initCalc(){$('calcs').innerHTML=C.map((c,k)=>`<div class="card"><b>${tr(c[0],c[1])}</b>${c[2].map(f=>`<label>${f[1]}</label><input type="number" id="${f[0]}${k}" value="${f[2]}">`).join('')}<div class="row"><button class="btn" onclick="runC(${k})">হিসাব</button></div><div class="res" id="r${k}"></div></div>`).join('');}
+function runC(k){const m={};C[k][2].forEach(f=>m[f[0]]=f[0]+k);const o=$;const bak=window.$;window.N=id=>+o(m[id]).value||0;const r=C[k][3].toString();
+ const fn=new Function('N',`return (${r})()`);const out=fn(id=>+o(m[id]).value||0);R('r'+k,out);hist('calc',tr(C[k][0],C[k][1])+': '+out);}
+
+const W=[['আজ','Today','⛅',31],['কাল','Tom','🌦️',29],['বুধ','Wed','🌧️',28],['বৃহঃ','Thu','🌧️',28],['শুক্র','Fri','⛅',30],['শনি','Sat','☀️',32],['রবি','Sun','☀️',33]];
+function wHtml(){return `<div style="display:flex;gap:18px;flex-wrap:wrap"><div><b style="font-size:2.2rem">31°C</b><br>${tr('আর্দ্রতা ৭৮% · বৃষ্টির সম্ভাবনা ৪০% · বাতাস ১২ কিমি/ঘণ্টা','Humidity 78% · Rain 40% · Wind 12 km/h')}</div></div><div class="grid" style="margin:12px 0">${W.map(d=>`<div class="card fc">${tr(d[0],d[1])}<b>${d[2]}</b>${d[3]}°</div>`).join('')}</div><div class="res">🌾 ${tr('বৃষ্টির আগে সার ও কীটনাশক স্প্রে এড়ান। পুকুরে অক্সিজেন বাড়ান এবং গবাদিপ্রাণীর জন্য শুকনো ছাউনি রাখুন।','Avoid spraying before rain. Boost pond aeration and keep animal sheds dry.')} <small>(${tr('নমুনা ডেটা','sample data')})</small></div>`;}
+const M=[['চাল (মোটা)','Rice','কেজি',58],['আলু','Potato','কেজি',40],['টমেটো','Tomato','কেজি',80],['রুই মাছ','Rui fish','কেজি',280],['ব্রয়লার মুরগি','Broiler','কেজি',190],['ডিম','Eggs','হালি',52],['গরু (জীবিত)','Cattle','কেজি',650],['ছাগল','Goat','কেজি',800]];
+function mHtml(n){return `<tr><th>${tr('পণ্য','Product')}</th><th>${tr('দাম','Price')}</th><th>${tr('একক','Unit')}</th><th>${tr('স্থান','Location')}</th><th>${tr('হালনাগাদ','Updated')}</th></tr>`+M.slice(0,n||99).map(m=>`<tr><td>${tr(m[0],m[1])}</td><td>৳${m[3]}</td><td>${m[2]}</td><td>${tr('ঢাকা','Dhaka')}</td><td>${tr('আজ ৯:০০','Today 9:00')}</td></tr>`).join('');}
+
+let P=[{q:'আমার পুকুরের মাছ পানির উপরে ভেসে উঠছে। কী করব?',l:12,a:['ভোরে অক্সিজেন কমে যায়। এরেটর চালান ও খাবার বন্ধ রাখুন।']},{q:'লেয়ার মুরগির ডিম কমে গেছে, কারণ কী?',l:5,a:[]}];
+function renderPosts(){const s=$('ps').value.toLowerCase();$('posts').innerHTML=P.map((p,i)=>({p,i})).filter(x=>x.p.q.toLowerCase().includes(s)).map(({p,i})=>`<div class="card" style="margin-top:10px"><b>${p.q}</b>${p.a.map(a=>`<p style="margin:6px 0">💬 ${a}</p>`).join('')}<div class="row"><button class="btn o" onclick="P[${i}].l++;renderPosts()">👍 ${p.l}</button><input id="c${i}" placeholder="উত্তর লিখুন..."><button class="btn" onclick="addA(${i})">↩</button></div></div>`).join('');}
+function addA(i){const v=$('c'+i).value.trim();if(v){P[i].a.push(v);renderPosts();}}
+function post(){const v=$('pt').value.trim();if(v){P.unshift({q:v,l:0,a:[]});$('pt').value='';renderPosts();}}
+
+function renderAll(){showGuides();initAid();initCalc();$('hs').placeholder=tr('আপনার সমস্যা বা প্রশ্ন লিখুন...','Type your problem or question...');R('mp-home',mHtml(5));R('mp',mHtml());R('w-home',wHtml());R('w-main',wHtml());initCal();initBlog();initAcct();initAdmin();}
+
+const st={g(k,d){try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},s(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+function toast(t){const d=document.createElement('div');d.textContent=t;d.style.cssText='position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--g2);color:#fff;padding:10px 18px;border-radius:99px;z-index:99';document.body.appendChild(d);setTimeout(()=>d.remove(),2600);}
+function hist(t,x){const u=st.g('kb_user',null);if(!u)return;const k='kb_h_'+u.email,h=st.g(k,{calc:[],chat:[],saved:[]});h[t].unshift(x);h[t]=h[t].slice(0,20);st.s(k,h);}
+async function hs(p){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(p));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');}
+st.g('kb_m',[]).forEach((v,i)=>{if(M[i])M[i][3]=v});
+const TIPS={agri:['আমন: ৩০–৩৫ দিনের চারা সারিতে রোপণ করুন; পোকা দমন সহজ হয়।','গম নভেম্বরের মাঝামাঝি–ডিসেম্বরের শুরুতে বপন করুন; ভুট্টায় ফুল আসার সময় সেচ জরুরি।','জৈব সার ও ফাঁদ ব্যবহার করে কীটনাশক কমান।','মৌসুমভিত্তিক সময় দেখুন “ক্যালেন্ডার/টিকা” ট্যাবে।','সার ভাগে ভাগে দিন; বৃষ্টির আগে ইউরিয়া নয়।','আক্রান্ত অংশ সরান; ছড়ালে উপজেলা কৃষি অফিসে জানান।'],
+live:['গরুকে ঘাস, খড় ও দানাদার সুষম দিন; সবসময় পরিষ্কার পানি রাখুন।','ছাগলের ঘর উঁচু ও শুকনো রাখুন; ভেজা মেঝেতে নিউমোনিয়ার ঝুঁকি।','খাদ্য বদল ৭–১০ দিনে ধীরে ধীরে করুন।','টিকার সময় দেখুন “ক্যালেন্ডার/টিকা” ট্যাবে।','অসুস্থ প্রাণী আলাদা রাখুন ও লক্ষণ লিখে রাখুন।'],
+poul:['ব্রয়লারে প্রথম সপ্তাহে ঘর ৩২–৩৪°C উষ্ণ রাখুন।','লেয়ারে প্রতিদিন একই সময়ে আলো ও খাবার দিন।','হাঁসের জন্য পরিষ্কার পানি ও শুকনো ঘর দরকার।','টিকার সূচি দেখুন “ক্যালেন্ডার/টিকা” ট্যাবে।','ঝিমানো, পাতলা পায়খানা, হাঁচি দেখলে আলাদা করুন।'],
+fish:['পোনা ছাড়ার আগে চুন ও সার দিয়ে পুকুর প্রস্তুত করুন।','তেলাপিয়ায় ঘনত্ব বেশি হলে অক্সিজেন বাড়ান।','রুই-কাতলা মিশ্র চাষে বিভিন্ন স্তরের মাছ মজুত করুন।','পাঙ্গাসে নিয়মিত পানি বদল ও সুষম খাদ্য জরুরি।','pH ৬.৫–৮.৫ ও পানির রং-গন্ধ নিয়মিত দেখুন।','আক্রান্ত মাছ দেখলে খাবার কমান ও মৎস্য কর্মকর্তাকে জানান।']};
+const CAL=[['আমন ধান','জুলাই–আগস্ট (রোপণ)','নভেম্বর–ডিসেম্বর'],['বোরো ধান','জানুয়ারি–ফেব্রুয়ারি (রোপণ)','এপ্রিল–মে'],['আউশ ধান','মার্চ–এপ্রিল','জুলাই–আগস্ট'],['গম','নভেম্বর–ডিসেম্বর','মার্চ'],['ভুট্টা (রবি)','নভেম্বর–ডিসেম্বর','এপ্রিল–মে'],['আলু','নভেম্বর','ফেব্রুয়ারি–মার্চ'],['সরিষা','অক্টোবর–নভেম্বর','জানুয়ারি–ফেব্রুয়ারি'],['শীতকালীন সবজি','অক্টোবর–নভেম্বর','ডিসেম্বর–ফেব্রুয়ারি']];
+const VP=[['১ম দিন','রানীক্ষেত + আইবি'],['৭–১০ দিন','রানীক্ষেত (ল্যাসোটা)'],['১০–১৪ দিন','গামবোরো (১ম ডোজ)'],['১৮–২১ দিন','গামবোরো ও রানীক্ষেত বুস্টার'],['৪–৬ সপ্তাহ','ফাউল পক্স (দেশি/লেয়ার)']];
+const VL=[['ক্ষুরারোগ (এফএমডি)','গরু, ছাগল','বছরে ২ বার'],['তড়কা','গরু, ছাগল','বছরে ১ বার'],['বাদলা ও গলাফুলা','গরু','বর্ষার আগে, বছরে ১ বার'],['পিপিআর','ছাগল, ভেড়া','বছরে ১ বার'],['কৃমিনাশক','সব প্রাণী','৩–৪ মাস অন্তর']];
+const tbl=(h,r)=>'<tr>'+h.map(x=>`<th>${x}</th>`).join('')+'</tr>'+r.map(x=>'<tr>'+x.map(y=>`<td>${y}</td>`).join('')+'</tr>').join('');
+function initCal(){R('ct',tbl(['ফসল','বপন/রোপণ','কাটা'],CAL));R('vp',tbl(['বয়স','টিকা'],VP));R('vl',tbl(['রোগ','প্রাণী','সময়'],VL));}
+const BL=[['বর্ষায় গবাদিপ্রাণীর যত্ন','ছাউনি শুকনো রাখুন, জমা পানি সরান, বর্ষার আগে টিকা দিন এবং ভেজা খড় খাওয়াবেন না।'],['পুকুরে অক্সিজেন সংকট চেনার উপায়','ভোরে মাছ ভেসে উঠলে অক্সিজেন কম। এরেটর চালান, মেঘলা দিনে খাবার কমান।'],['কম খরচে সার ব্যবস্থাপনা','মাটি পরীক্ষা করুন, জৈব সার মেশান, ইউরিয়া ভাগে ভাগে দিন।'],['খামারে জীবনিরাপত্তা','প্রবেশপথে পা ধোয়ার ব্যবস্থা রাখুন, নতুন পাখি আলাদা রাখুন, মৃত পাখি গভীরে পুঁতুন।']];
+function initBlog(){R('bl',BL.map((b,i)=>`<details class="card" style="margin-bottom:10px"><summary><b>${b[0]}</b></summary><p>${b[1]}</p><button class="btn o" onclick="saveA(${i})">🔖 সংরক্ষণ</button></details>`).join(''));}
+function saveA(i){if(!st.g('kb_user',null)){toast('সংরক্ষণ করতে লগইন করুন');go('acct');return}hist('saved',BL[i][0]);toast('সংরক্ষিত হয়েছে');}
+function sendC(){if(!$('cm').value.trim())return;$('cm').value='';toast('ধন্যবাদ! বার্তা পাঠানো হয়েছে (ডেমো)');}
+let am='login';
+function initAcct(){const u=st.g('kb_user',null);
+ if(!u){R('ac',`<div class="card" style="max-width:420px;margin:auto"><div class="tabs"><button class="${am=='login'?'on':''}" onclick="am='login';initAcct()">লগইন</button><button class="${am=='reg'?'on':''}" onclick="am='reg';initAcct()">নিবন্ধন</button></div>${am=='reg'?'<label>নাম</label><input id="rn">':''}<label>ইমেইল</label><input id="re" type="email"><label>পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর)</label><input id="rp" type="password"><div class="row"><button class="btn" onclick="auth()">${am=='reg'?'নিবন্ধন করুন':'লগইন'}</button><button class="btn o" onclick="toast('পাসওয়ার্ড রিসেটের জন্য সার্ভার লাগবে (ডেমো)')">পাসওয়ার্ড ভুলে গেছেন?</button></div></div>`);return}
+ const h=st.g('kb_h_'+u.email,{calc:[],chat:[],saved:[]});
+ const ls=(t,a)=>`<div class="card"><b>${t}</b>${a.length?'<ul>'+a.map(x=>`<li>${x}</li>`).join('')+'</ul>':'<p style="color:var(--mu)">এখনো কিছু নেই</p>'}</div>`;
+ R('ac',`<h2>👤 ${u.name}</h2><p style="color:var(--mu)">${u.email}</p><div class="two">${ls('🔖 সংরক্ষিত আর্টিকেল',h.saved)+ls('💬 AI প্রশ্নের ইতিহাস',h.chat)+ls('🧮 ক্যালকুলেটর ইতিহাস',h.calc)}</div><div class="row"><button class="btn o" onclick="st.s('kb_user',null);renderAll()">লগআউট</button></div>`);}
+async function auth(){const e=$('re').value.trim().toLowerCase(),p=$('rp').value;if(!/^\S+@\S+\.\S+$/.test(e)||p.length<6)return toast('সঠিক ইমেইল ও ৬+ অক্ষরের পাসওয়ার্ড দিন');
+ const us=st.g('kb_users',[]),h=await hs(p);
+ if(am=='reg'){if(us.some(x=>x.e==e))return toast('এই ইমেইল আগে থেকেই আছে');us.push({e,h,n:($('rn').value||'').trim()||'কৃষক'});st.s('kb_users',us);}
+ const f=us.find(x=>x.e==e&&x.h==h);if(!f)return toast('ইমেইল বা পাসওয়ার্ড ভুল');
+ st.s('kb_user',{email:e,name:f.n});renderAll();toast('স্বাগতম!');}
+function initAdmin(){const u=st.g('kb_user',null);
+ if(!u||!u.email.startsWith('admin@')){R('ad','<div class="card">অ্যাডমিন প্যানেল দেখতে <b>admin@…</b> ইমেইল দিয়ে নিবন্ধন/লগইন করুন। (ডেমো — আসল সিস্টেমে সার্ভার-সাইড রোল চেক দরকার)</div>');return}
+ const s=[['ইউজার',st.g('kb_users',[]).length],['আর্টিকেল',BL.length],['কমিউনিটি পোস্ট',P.length],['সবচেয়ে খোঁজা রোগ (নমুনা)','কক্সিডিওসিস'],['সর্বাধিক দেখা গাইড (নমুনা)','ধান চাষ']];
+ R('ad',`<div class="grid">${s.map(x=>`<div class="card fc"><b>${x[1]}</b>${x[0]}</div>`).join('')}</div><h2>বাজারদর সম্পাদনা</h2><div class="card">${M.map((m,i)=>`<div class="row"><span style="flex:1">${m[0]}</span><input type="number" style="width:110px" value="${m[3]}" onchange="M[${i}][3]=+this.value;st.s('kb_m',M.map(x=>x[3]));renderAll()"></div>`).join('')}</div>`);}
+buildNav();renderAll();initChat();renderPosts();document.querySelector('nav button').classList.add('on');
+</script>
+</body>
+</html>
